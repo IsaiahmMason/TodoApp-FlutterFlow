@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "761895654631",
+    "project_id": "to-do-hhes22",
+    "storage_bucket": "to-do-hhes22.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761895654631:android:f4f56f9956b44ea2d33e42",
+        "android_client_info": {
+          "package_name": "com.mycompany.todo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4IGAGXzNTSR6vBonul5SRrDJDlqdNgOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
