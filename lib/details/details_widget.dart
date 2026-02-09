@@ -106,18 +106,33 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                               context.pushNamed(TasksWidget.routeName);
                             },
                           ),
-                          FlutterFlowIconButton(
-                            borderRadius: 8.0,
-                            buttonSize: 50.0,
-                            icon: Icon(
-                              Icons.edit,
-                              color: FlutterFlowTheme.of(context).secondaryText,
-                              size: 30.0,
-                            ),
-                            onPressed: () async {
-                              _model.editingMode = !_model.editingMode;
-                              safeSetState(() {});
-                            },
+                          Stack(
+                            children: [
+                              if (!_model.editingMode)
+                                FlutterFlowIconButton(
+                                  borderRadius: 8.0,
+                                  buttonSize: 50.0,
+                                  icon: Icon(
+                                    Icons.edit,
+                                  ),
+                                  onPressed: () async {
+                                    _model.editingMode = !_model.editingMode;
+                                    safeSetState(() {});
+                                  },
+                                ),
+                              if (_model.editingMode)
+                                FlutterFlowIconButton(
+                                  borderRadius: 8.0,
+                                  buttonSize: 50.0,
+                                  icon: Icon(
+                                    Icons.edit_off,
+                                  ),
+                                  onPressed: () async {
+                                    _model.editingMode = !_model.editingMode;
+                                    safeSetState(() {});
+                                  },
+                                ),
+                            ],
                           ),
                         ],
                       ),
